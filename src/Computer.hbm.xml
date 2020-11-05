@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hibernate">
+  <class name="Computer" table="computers">
+    <id column="id" name="id" unsaved-value="null">
+      <generator class="native"/>
+    </id>
+    <many-to-one name="computerDescription" column="computerDescriptionID" class="ComputerDescription" cascade="all"/>
+    <property column="producer" name="producer"/>
+    <property column="processor" name="processor"/>
+    <property column="cores" name="cores"/>
+      </class>
+</hibernate-mapping>
